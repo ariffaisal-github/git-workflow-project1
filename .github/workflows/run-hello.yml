@@ -1,0 +1,16 @@
+name: Github Actions CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  read_hello_txt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Read and Output
+        run: cat hello.txt
